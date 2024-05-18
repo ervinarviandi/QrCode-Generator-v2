@@ -6,7 +6,6 @@ import { useState, ChangeEvent, useEffect, useCallback } from "react";
 import { QRCode } from "react-qrcode-logo";
 import * as htmlToImage from "html-to-image";
 // import { ChromePicker } from "react-color";
-import { Toast } from "@/components/atoms/Toast";
 import { Input } from "@/components/ui/input";
 
 // import { toast } from "../ui/use-toast";
@@ -30,7 +29,7 @@ const Qrcode = () => {
 
   // const [displayColorPicker, setDisplayColorPicker] = useState(false);
 
-  const handleDownload = (p0: React.JSX.Element) => {
+  const handleDownload = () => {
     htmlToImage
       .toJpeg(document.getElementById("qr-code-wrapper")!)
       .then((dataUrl) => {
@@ -95,14 +94,12 @@ const Qrcode = () => {
                 </p>
               </div>
               <button
-                // onClick={handleDownload}
-                onClick={() => {
-                  handleDownload(
-                    <div>
-                      <Toast />
-                    </div>
-                  );
-                }}
+                onClick={handleDownload}
+                // onClick={() => {
+                //   handleDownload(
+
+                //   );
+                // }}
                 className=" w-full my-4 py-2  bg-teal-500 hover:bg-teal-400  rounded-lg text-white font-sora font-bold"
               >
                 Save QR
