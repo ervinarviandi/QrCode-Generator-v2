@@ -13,7 +13,7 @@ export function Toast() {
       variant="outline"
       onClick={() => {
         toast({
-          title: "Scheduled: Catch up ",
+          title: "Thank you for using the QR code generator ",
           description: "Friday, February 10, 2023 at 5:57 PM",
           action: (
             <ToastAction altText="Goto schedule to undo">Undo</ToastAction>

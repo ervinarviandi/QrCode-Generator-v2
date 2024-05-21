@@ -73,6 +73,13 @@ const Qrcode = () => {
     []
   );
 
+  const handleColorChange = useCallback(
+    (e: React.ChangeEvent<HTMLSelectElement>) => {
+      setColor(e.target.value);
+    },
+    []
+  );
+
   return (
     <>
       <div className="w-full qrcode pt-32 ">
